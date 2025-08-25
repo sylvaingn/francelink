@@ -5,7 +5,7 @@ Commande à potentiellement exécuter avec le PowerShell en mode admin
 ## 2. Installer le core de wordpress ainsi que les plugins
 
 `wp core download --path=wp-root --locale=fr_FR`<br><br>
-`cd ./wp-root; wp core config --dbname=francelink --dbuser=root --dbpass=root --dbhost=127.0.0.1:8889 --dbprefix=wp_ --locale=fr_FR; wp core install --url="http://localhost/francelink/wp-root" --title="Francelink" --admin_user="admin" --admin_password="admin" --admin_email="maintenance@francelink.fr"; wp plugin install ewww-image-optimizer fluent-smtp wordpress-seo safe-svg contact-form-7 --activate `
+`cd ./wp-root; wp core config --dbname=francelink --dbuser=root --dbpass=root --dbhost=127.0.0.1:8889 --dbprefix=wp_ --locale=fr_FR; wp core install --url="http://localhost/francelink/wp-root" --title="Francelink" --admin_user="admin" --admin_password="admin" --admin_email="contact@francelink.fr"; wp plugin install ewww-image-optimizer fluent-smtp wordpress-seo safe-svg contact-form-7 --activate `
 
 ## 3. Créer un lien symbolique
 

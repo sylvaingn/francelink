@@ -5,20 +5,26 @@ $breakpoint-lg: 1279px;
 $breakpoint-xl: 1520px;
 
 // Ne pas mettre dans le theme.json, les manipulations avec rgba ne seront pas faisables
-$blue: #2C76FF;
-$red: #FF3B48;
-$dark-blue: #2B2B42;
+$primary: #eb5d18;
+$gray: #7C7B7B;
+$light-gray: #d5d5d5;
 $black: #232222;
-$dark-gray: #282828;
-$light-gray: #888994;
 $white: #FFFFFF;
 
-$font-family-base: var(--wp--preset--font-family--base);
+$font-family-base: "Roboto", serif;
+//$font-family-base: var(--wp--preset--font-family--base);
 $font-family-title: var(--wp--preset--font-family--title);
 $font-family-btn: var(--wp--preset--font-family--title);
 $font-family-fa: 'Font Awesome Kit';
 
 $cubic-transition: cubic-bezier(0.65, 0, 0.35, 1);
+
+%btn-primary-hover {
+	background-color: $primary;
+	border-color: $primary;
+	color: $white !important;
+}
+
 
 %icon-props {
 	font-family: $font-family-fa;

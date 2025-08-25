@@ -4,6 +4,9 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <?php wp_head(); ?>
 </head>
 
@@ -28,27 +31,11 @@
                 ));
                 ?>
 
-                <?php
-                $billeterie_link = get_field('billeterie-page', 'options');
-
-                if (isset($billeterie_link) && $billeterie_link != ''): ?>
-                    <a href="<?php echo $billeterie_link; ?>"
-                       class="btn"><?php echo __("Billeterie", TEXT_DOMAIN) ?></a>
-                <?php endif; ?>
+                    <a href="https://status.francelink.net" target="_blank" rel="noopener"
+                       class="btn btn-primary"><?php echo __("Notre page de status", TEXT_DOMAIN) ?></a>
             </div>
 
             <div class="burger">
-                <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path id="line-bot"
-                          d="M36.0547 29.4152L4.00006 29.4152L4.00007 37.3102L24.6762 37.3102L36.0547 34.9912L36.0547 29.4152Z"
-                          fill="#2B2B42"/>
-                    <path id="line-mid"
-                          d="M36.0547 16.52L4.00006 16.52L4.00007 24.4151L24.6762 24.4151L36.0547 22.096L36.0547 16.52Z"
-                          fill="#2B2B42"/>
-                    <path id="line-top"
-                          d="M36.0547 3.625L4.00006 3.625L4.00007 11.5201L24.6762 11.5201L36.0547 9.201L36.0547 3.625Z"
-                          fill="#2B2B42"/>
-                </svg>
             </div>
         </div>
     </div>

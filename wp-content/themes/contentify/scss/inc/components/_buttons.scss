@@ -2,21 +2,24 @@
 
 .btn {
 	display: block;
-	font-size: var(--wp--preset--font-size--complement-button);
+	font-size: var(--wp--preset--font-size--button);
 	font-family: $font-family-btn;
 	line-height: 1.1em;
 	text-transform: uppercase;
-	font-weight: 700;
+	font-weight: 500;
 	width: max-content;
 	height: max-content;
 	text-decoration: none;
 	color: inherit;
 	border: 2px solid currentColor;
-	padding: 10px 15px;
+	padding: 0.3em 0.5em;
+	transition: all 0.4s $cubic-transition;
 
-	&.btn-full {
-		border-color: $white;
-		background-color: $white;
-		color: $dark-blue !important;
+	&.btn-primary {
+		color: $primary !important;
+
+		&:hover {
+			@extend %btn-primary-hover;
+		}
 	}
 }

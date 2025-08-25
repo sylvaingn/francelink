@@ -4,7 +4,7 @@
 .site-logo {
 	display: block;
 	height: clamp(36px, 5vw, 86px);
-	width: clamp(78px, 10.3vw, 180px);
+	width: clamp(138px, 15.3vw, 180px);
 	mask: var(--logo-url) no-repeat 50%;
 	mask-size: contain;
 	background-color: currentColor;
@@ -15,7 +15,6 @@
 	width: 100vw;
 	max-width: 100%;
 	background-color: $white;
-	color: $dark-blue;
 
 	a {
 		@extend %hidden-link;
@@ -59,9 +58,6 @@
 		}
 
 		a {
-			@extend .title;
-			@extend .subtitle;
-
 			display: block;
 			width: max-content;
 			text-align: center;
@@ -76,10 +72,6 @@
 		align-items: center;
 		gap: 20px;
 		padding: 15px 0;
-
-		@media screen and (min-width: $breakpoint-lg) {
-			padding: 50px 0;
-		}
 
 		.wrapper--nav {
 			display: flex;
@@ -100,7 +92,7 @@
 
 					> li {
 						position: relative;
-						font-family: $font-family-title;
+						//font-family: $font-family-title;
 
 						> a {
 							position: relative;
@@ -112,7 +104,7 @@
 								left: 0;
 								width: 0;
 								height: 4px;
-								background-color: $dark-blue;
+								background-color: $primary;
 								transition: width 0.5s ease;
 							}
 						}
@@ -123,7 +115,7 @@
 							top: 100%;
 							left: 20%;
 							list-style: none;
-							background: $dark-blue;
+							background: $primary;
 							color: $white;
 							width: max-content;
 							z-index: 1000;

@@ -9,12 +9,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: $dark-blue;
+	background-color: $primary;
 	border-radius: 20px;
 }
 
 ::selection {
-	background-color: $blue;
+	background-color: $primary;
 	color: $white;
 }
 
@@ -29,7 +29,7 @@
 
 body {
 	margin: 0;
-	color: $dark-blue;
+	color: $black;
 	overflow-x: hidden;
 	font-family: $font-family-base;
 	font-weight: 400;
@@ -52,7 +52,7 @@ body {
 	padding-right: var(--container-padding);
 	margin-left: auto;
 	margin-right: auto;
-	max-width: calc(var(--container-xxlarge) + var(--container-padding) * 2);
+	max-width: calc(var(--container-medium) + var(--container-padding) * 2);
 }
 
 .container-xxsmall {
@@ -92,17 +92,13 @@ body {
 
 	> *:not(.contentify-block):not(.top-page):not(.large-content) {
 		@extend .container;
-		@media screen and (min-width: $breakpoint-sm) {
-			padding-left: 0;
-			padding-right: 0;
+
+		&:first-child {
+			padding-top: 4rem;
 		}
 
-		&:first-of-type {
-			padding-top: 4em;
-		}
-
-		&:last-of-type {
-			padding-bottom: 4em;
+		&:last-child {
+			padding-bottom: 4rem;
 		}
 	}
 }

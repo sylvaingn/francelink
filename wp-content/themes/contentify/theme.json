@@ -17,19 +17,14 @@
             "defaultPalette": false,
             "palette": [
                 {
-                    "color": "#2C76FF",
+                    "color": "#eb5d18",
                     "name": "Primary",
                     "slug": "primary"
                 },
                 {
-                    "color": "#ffe047",
-                    "name": "Secondary",
-                    "slug": "secondary"
-                },
-                {
-                    "color": "#2B2B42",
-                    "name": "Dark Blue",
-                    "slug": "dark-blue"
+                    "color": "#7C7B7B",
+                    "name": "Gray",
+                    "slug": "gray"
                 }
             ],
             "duotone": [],
@@ -114,49 +109,9 @@
                             ]
                         }
                     ]
-                },
-                {
-                    "name": "Police de textes",
-                    "slug": "base",
-                    "fontFamily": "'ATSurt', sans-serif",
-                    "fontFace": [
-                        {
-                            "fontFamily": "ATSurt",
-                            "fontWeight": "400",
-                            "fontStyle": "normal",
-                            "fontStretch": "normal",
-                            "src": [
-                                "file:./assets/fonts/ATSurt-Regular.woff2"
-                            ]
-                        },
-                        {
-                            "fontFamily": "ATSurt",
-                            "fontWeight": "700",
-                            "fontStyle": "normal",
-                            "fontStretch": "normal",
-                            "src": [
-                                "file:./assets/fonts/ATSurt-Bold.woff2"
-                            ]
-                        }
-                    ]
                 }
             ],
             "fontSizes": [
-                {
-                    "name": "Titre Rubrique",
-                    "slug": "rubrique-title",
-                    "size": "clamp(35px, 5.5vw, 64px)"
-                },
-                {
-                    "name": "Titre Bannière",
-                    "slug": "banner-title",
-                    "size": "clamp(35px, 5.5vw, 65px)"
-                },
-                {
-                    "name": "Accrochage page + Exergue",
-                    "slug": "accrochage-title",
-                    "size": "clamp(24px, 5vw, 48px)"
-                },
                 {
                     "name": "Titre",
                     "slug": "main-title",
@@ -170,22 +125,12 @@
                 {
                     "name": "Corps de texte",
                     "slug": "normal",
-                    "size": "clamp(15px, 3.5vw, 22px)"
+                    "size": "16px"
                 },
                 {
-                    "name": "Infos",
-                    "slug": "infos",
-                    "size": "clamp(14px, 3.5vw, 16px)"
-                },
-                {
-                    "name": "Complément ou Bouton",
-                    "slug": "complement-button",
+                    "name": "Bouton",
+                    "slug": "button",
                     "size": "18px"
-                },
-                {
-                    "name": "Citation",
-                    "slug": "quote",
-                    "size": "clamp(24px, 3.5vw, 48px)"
                 }
             ],
             "fontStyle": true,
