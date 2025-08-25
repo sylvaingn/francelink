@@ -1,0 +1,55 @@
+@use '../variables' as *;
+
+.swiper.swiper-navigation-disabled {
+	.posts-slider-pagination, .swiper-pagination, .swiper-button-prev, .swiper-button-next {
+		display: none !important;
+	}
+}
+
+.swiper-button-next, .swiper-button-prev {
+	z-index: 10;
+	cursor: pointer;
+
+	&, &::before {
+		width: 50px !important;
+		height: 45px !important;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		mask-image: url(../assets/img/arrow_bg.svg);
+		mask-size: contain;
+		mask-position: center;
+		mask-repeat: no-repeat;
+		background-color: $blue;
+	}
+
+	&::after {
+		color: $white;
+		font-weight: 600;
+	}
+}
+
+.swiper-pagination {
+	position: relative;
+	z-index: 100;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 0.5em;
+
+	.swiper-pagination-bullet {
+		display: inline-block;
+		height: 7px;
+		width: 7px;
+		border-radius: 50%;
+		background: currentColor;
+		cursor: pointer;
+
+		&:not(.swiper-pagination-bullet-active) {
+			opacity: 0.5;
+		}
+	}
+}

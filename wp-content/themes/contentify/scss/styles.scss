@@ -1,0 +1,16 @@
+// General
+@use 'inc/reset' as *;
+@use 'inc/variables' as *;
+@use 'inc/general' as *;
+@use 'inc/header' as *;
+
+// Components
+@use "inc/components/titles" as *;
+@use "inc/components/buttons" as *;
+@use "inc/components/sliders" as *;
+@use "inc/components/posts" as *;
+@use "inc/components/img" as *;
+@use "inc/components/forms" as *;
+@use "inc/components/pagination" as *;
+@use "inc/components/tags" as *;
+

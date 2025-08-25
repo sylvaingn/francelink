@@ -1,0 +1,22 @@
+@use '../variables' as *;
+
+.btn {
+	display: block;
+	font-size: var(--wp--preset--font-size--complement-button);
+	font-family: $font-family-btn;
+	line-height: 1.1em;
+	text-transform: uppercase;
+	font-weight: 700;
+	width: max-content;
+	height: max-content;
+	text-decoration: none;
+	color: inherit;
+	border: 2px solid currentColor;
+	padding: 10px 15px;
+
+	&.btn-full {
+		border-color: $white;
+		background-color: $white;
+		color: $dark-blue !important;
+	}
+}

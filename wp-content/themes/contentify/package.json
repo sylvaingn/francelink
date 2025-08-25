@@ -1,0 +1,44 @@
+{
+    "name": "contentify-theme",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "block": "node block_generator.js",
+        "prod": "gulp build",
+        "dev": "gulp watch",
+        "fa": "npm install '@awesome.me/kit-6115888835@latest'"
+    },
+    "author": "",
+    "devDependencies": {
+        "@wordpress/element": "^5.34.0",
+        "autoprefixer": "^9.0.0",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-react": "^6.24.1",
+        "browser-sync": "^2.29.3",
+        "cssnano": "^7.0.2",
+        "dotenv": "^16.4.5",
+        "esbuild": "^0.21.5",
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^9.0.0",
+        "gulp-clean": "^0.4.0",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-cssmin": "^0.2.0",
+        "gulp-esbuild": "^0.11.2",
+        "gulp-image": "^6.3.1",
+        "gulp-imagemin": "^9.1.0",
+        "gulp-minify": "^3.1.0",
+        "gulp-minify-css": "^1.2.4",
+        "gulp-postcss": "^10.0.0",
+        "gulp-sass": "^5.1.0",
+        "gulp-sourcemaps": "^3.0.0",
+        "gulp-uglifycss": "^1.1.0",
+        "lodash": "^4.17.21",
+        "sass": "^1.64.2"
+    },
+    "dependencies": {
+        "@awesome.me/kit-6115888835": "^1.0.11",
+        "gsap": "^3.12.2",
+        "swiper": "^10.3.1"
+    }
+}

@@ -1,0 +1,19 @@
+@use "./inc/reset" as *;
+@use "./inc/variables" as *;
+@use "./inc/components/buttons" as *;
+@use "./inc/components/titles" as *;
+@use "./inc/components/posts" as *;
+
+.is-root-container,
+.editor-visual-editor__post-title-wrapper.edit-post-visual-editor__post-title-wrapper {
+	font-family: $font-family-base;
+	padding: 0 var(--container-padding);
+}
+
+.editor-visual-editor__post-title-wrapper.edit-post-visual-editor__post-title-wrapper h1 {
+	margin-bottom: 1em;
+}
+
+.contentify-block a {
+	pointer-events: none;
+}

@@ -1,0 +1,28 @@
+@use '../variables' as *;
+
+.title,
+h1, h2, h3, h4, h5, h6 {
+	display: block;
+	width: 100%;
+	font-family: $font-family-title;
+	line-height: 1.1em;
+	font-weight: 700;
+	text-transform: uppercase;
+	overflow-wrap: anywhere;
+}
+
+h1,
+.big-title {
+	font-size: var(--wp--preset--font-size--rubrique-title);
+}
+
+h2,
+.section-title {
+	font-size: var(--wp--preset--font-size--banner-title);
+}
+
+h3,
+.subtitle {
+	font-size: var(--wp--preset--font-size--subtitle);
+	font-weight: 500;
+}

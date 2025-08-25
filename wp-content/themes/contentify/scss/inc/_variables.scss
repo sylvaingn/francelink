@@ -1,0 +1,61 @@
+$breakpoint-xs: 576px;
+$breakpoint-sm: 740px;
+$breakpoint-md: 1024px;
+$breakpoint-lg: 1279px;
+$breakpoint-xl: 1520px;
+
+// Ne pas mettre dans le theme.json, les manipulations avec rgba ne seront pas faisables
+$blue: #2C76FF;
+$red: #FF3B48;
+$dark-blue: #2B2B42;
+$black: #232222;
+$dark-gray: #282828;
+$light-gray: #888994;
+$white: #FFFFFF;
+
+$font-family-base: var(--wp--preset--font-family--base);
+$font-family-title: var(--wp--preset--font-family--title);
+$font-family-btn: var(--wp--preset--font-family--title);
+$font-family-fa: 'Font Awesome Kit';
+
+$cubic-transition: cubic-bezier(0.65, 0, 0.35, 1);
+
+%icon-props {
+	font-family: $font-family-fa;
+	font-size: 1em;
+}
+
+%hidden-link {
+	text-decoration: none;
+	cursor: pointer;
+	color: inherit;
+}
+
+:root {
+	--container-padding: 20px;
+
+	--container-xxlarge: 1728px;
+	--container-xlarge: 1648px;
+	--container-large: 1280px;
+	--container-medium: 920px;
+	--container-small: 854px;
+	--container-xsmall: 575px;
+	--container-xxsmall: 360px;
+
+	--scrollbar-width: 0px;
+
+	--button-top-padding: 0.75em;
+	--button-bottom-padding: 0.7em;
+
+	--swiper-btn-height: 36px;
+	--swiper-navigation-size: 20px;
+
+	@media screen and (min-width: $breakpoint-md) {
+		--scrollbar-width: 5px;
+		--container-padding: 50px;
+	}
+
+	@-moz-document url-prefix() {
+		--scrollbar-width: 0px;
+	}
+}

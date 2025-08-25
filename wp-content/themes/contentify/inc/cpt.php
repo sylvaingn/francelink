@@ -1,0 +1,46 @@
+<?php
+
+add_action('init', function () {
+    register_post_type('archive-template', array(
+        'labels' => array(
+            'name' => 'Modèles d\'archives',
+            'singular_name' => 'Modèle d\'archive',
+            'menu_name' => 'Modèles d\'archives',
+            'all_items' => 'Tous les Modèles d\'archives',
+            'edit_item' => 'Modifier Modèle d\'archive',
+            'view_item' => 'Voir Modèle d\'archive',
+            'view_items' => 'Voir Modèles d\'archives',
+            'add_new_item' => 'Ajouter Modèle d\'archive',
+            'add_new' => 'Ajouter Modèle d\'archive',
+            'new_item' => 'Nouveau Modèle d\'archive',
+            'parent_item_colon' => 'Modèle d\'archive parent :',
+            'search_items' => 'Rechercher Modèles d\'archives',
+            'not_found' => 'Aucun modèles d\'archives trouvé',
+            'not_found_in_trash' => 'Aucun modèles d\'archives trouvé dans la corbeille',
+            'archives' => 'Archives des Modèle d\'archive',
+            'attributes' => 'Attributs des Modèle d\'archive',
+            'insert_into_item' => 'Insérer dans modèle d\'archive',
+            'uploaded_to_this_item' => 'Téléversé sur ce modèle d\'archive',
+            'filter_items_list' => 'Filtrer la liste modèles d\'archives',
+            'filter_by_date' => 'Filtrer modèles d\'archives par date',
+            'items_list_navigation' => 'Navigation dans la liste Modèles d\'archives',
+            'items_list' => 'Liste Modèles d\'archives',
+            'item_published' => 'Modèle d\'archive publié.',
+            'item_published_privately' => 'Modèle d\'archive publié en privé.',
+            'item_reverted_to_draft' => 'Modèle d\'archive repassé en brouillon.',
+            'item_scheduled' => 'Modèle d\'archive planifié.',
+            'item_updated' => 'Modèle d\'archive mis à jour.',
+            'item_link' => 'Lien Modèle d\'archive',
+            'item_link_description' => 'Un lien vers un modèle d\'archive.',
+        ),
+        'public' => true,
+        'show_in_rest' => true,
+        'menu_icon' => 'dashicons-admin-post',
+        'supports' => array(
+            0 => 'title',
+            1 => 'editor',
+            2 => 'revisions',
+        ),
+        'delete_with_user' => false,
+    ));
+});

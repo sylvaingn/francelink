@@ -1,0 +1,31 @@
+@use '../variables' as *;
+
+.lazy-img-container {
+	position: relative;
+	overflow: hidden;
+
+	span {
+		pointer-events: none;
+		animation: none;
+		position: absolute;
+		z-index: 3;
+		right: 0;
+		bottom: 0;
+		height: 200%;
+		width: 200%;
+		background: $light-gray;
+		border-radius: 200vw 0 0 0;
+		transform: translate(0, 0);
+		opacity: 1;
+		transform-origin: top right;
+		will-change: background-color, transform;
+		transition: transform 2s cubic-bezier(0.25, 0.82, 0.08, 0.99), opacity 1s $cubic-transition;
+	}
+
+	&.lazy-img-container-loaded {
+		span {
+			transform: translate(100%, 50%);
+			opacity: 0;
+		}
+	}
+}

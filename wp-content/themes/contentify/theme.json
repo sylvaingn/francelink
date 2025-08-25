@@ -1,0 +1,215 @@
+{
+    "version": 3,
+    "settings": {
+        "appearanceTools": true,
+        "border": {
+            "color": false,
+            "radius": true,
+            "style": false,
+            "width": false
+        },
+        "color": {
+            "background": true,
+            "custom": true,
+            "customDuotone": true,
+            "customGradient": true,
+            "defaultGradients": true,
+            "defaultPalette": false,
+            "palette": [
+                {
+                    "color": "#2C76FF",
+                    "name": "Primary",
+                    "slug": "primary"
+                },
+                {
+                    "color": "#ffe047",
+                    "name": "Secondary",
+                    "slug": "secondary"
+                },
+                {
+                    "color": "#2B2B42",
+                    "name": "Dark Blue",
+                    "slug": "dark-blue"
+                }
+            ],
+            "duotone": [],
+            "gradients": [],
+            "link": false,
+            "text": true
+        },
+        "custom": {},
+        "dimensions": {
+            "aspectRatio": false,
+            "minHeight": false
+        },
+        "layout": {
+            "contentSize": "1340px",
+            "wideSize": "1000px"
+        },
+        "spacing": {
+            "blockGap": true,
+            "margin": true,
+            "padding": true,
+            "customSpacingSize": true,
+            "units": [
+                "px",
+                "em",
+                "rem",
+                "vh",
+                "vw"
+            ],
+            "spacingScale": {
+                "operator": "*",
+                "increment": 1.5,
+                "steps": 7,
+                "mediumStep": 1.5,
+                "unit": "rem"
+            },
+            "spacingSizes": []
+        },
+        "typography": {
+            "customFontSize": false,
+            "dropCap": true,
+            "fluid": false,
+            "fontFamilies": [
+                {
+                    "name": "Police des titres",
+                    "slug": "title",
+                    "fontFamily": "'Oswald', sans-serif",
+                    "fontFace": [
+                        {
+                            "fontFamily": "Oswald",
+                            "fontWeight": "300",
+                            "fontStyle": "normal",
+                            "fontStretch": "normal",
+                            "src": [
+                                "file:./assets/fonts/Oswald-Light.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "Oswald",
+                            "fontWeight": "500",
+                            "fontStyle": "normal",
+                            "fontStretch": "normal",
+                            "src": [
+                                "file:./assets/fonts/Oswald-Medium.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "Oswald",
+                            "fontWeight": "600",
+                            "fontStyle": "normal",
+                            "fontStretch": "normal",
+                            "src": [
+                                "file:./assets/fonts/Oswald-SemiBold.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "Oswald",
+                            "fontWeight": "700",
+                            "fontStyle": "normal",
+                            "fontStretch": "normal",
+                            "src": [
+                                "file:./assets/fonts/Oswald-Bold.woff2"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Police de textes",
+                    "slug": "base",
+                    "fontFamily": "'ATSurt', sans-serif",
+                    "fontFace": [
+                        {
+                            "fontFamily": "ATSurt",
+                            "fontWeight": "400",
+                            "fontStyle": "normal",
+                            "fontStretch": "normal",
+                            "src": [
+                                "file:./assets/fonts/ATSurt-Regular.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "ATSurt",
+                            "fontWeight": "700",
+                            "fontStyle": "normal",
+                            "fontStretch": "normal",
+                            "src": [
+                                "file:./assets/fonts/ATSurt-Bold.woff2"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "fontSizes": [
+                {
+                    "name": "Titre Rubrique",
+                    "slug": "rubrique-title",
+                    "size": "clamp(35px, 5.5vw, 64px)"
+                },
+                {
+                    "name": "Titre Bannière",
+                    "slug": "banner-title",
+                    "size": "clamp(35px, 5.5vw, 65px)"
+                },
+                {
+                    "name": "Accrochage page + Exergue",
+                    "slug": "accrochage-title",
+                    "size": "clamp(24px, 5vw, 48px)"
+                },
+                {
+                    "name": "Titre",
+                    "slug": "main-title",
+                    "size": "clamp(23px, 3.5vw, 38px)"
+                },
+                {
+                    "name": "Sous-titre",
+                    "slug": "subtitle",
+                    "size": "clamp(23px, 3.5vw, 25px)"
+                },
+                {
+                    "name": "Corps de texte",
+                    "slug": "normal",
+                    "size": "clamp(15px, 3.5vw, 22px)"
+                },
+                {
+                    "name": "Infos",
+                    "slug": "infos",
+                    "size": "clamp(14px, 3.5vw, 16px)"
+                },
+                {
+                    "name": "Complément ou Bouton",
+                    "slug": "complement-button",
+                    "size": "18px"
+                },
+                {
+                    "name": "Citation",
+                    "slug": "quote",
+                    "size": "clamp(24px, 3.5vw, 48px)"
+                }
+            ],
+            "fontStyle": true,
+            "fontWeight": true,
+            "letterSpacing": true,
+            "lineHeight": false,
+            "textAlign": true,
+            "textColumns": false,
+            "textDecoration": true,
+            "textTransform": true
+        },
+        "blocks": {
+            "core/paragraph": {
+                "border": {
+                    "radius": true
+                },
+                "color": {},
+                "custom": {},
+                "layout": {},
+                "spacing": {},
+                "typography": {}
+            },
+            "core/heading": {},
+            "etc": {}
+        }
+    }
+}

@@ -1,0 +1,34 @@
+@use '../variables' as *;
+
+.navigation.pagination {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1em;
+	margin-top: 2em;
+
+	.screen-reader-text {
+		font-weight: 600;
+		clip-path: unset;
+		height: unset;
+		position: unset;
+		width: unset;
+		overflow: unset;
+	}
+
+	.icon-arrow.prev::before {
+		transform: rotate(180deg);
+	}
+
+	.page-numbers.current {
+		font-weight: 600;
+		color: $blue;
+	}
+
+	.page-numbers-container {
+		display: flex;
+		gap: 1em;
+		align-items: center;
+		justify-content: center;
+	}
+}

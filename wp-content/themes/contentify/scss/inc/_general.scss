@@ -1,0 +1,144 @@
+@use 'variables' as *;
+
+::-webkit-scrollbar {
+	width: var(--scrollbar-width);
+
+	@media screen and (max-width: $breakpoint-md) {
+		height: 0;
+	}
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: $dark-blue;
+	border-radius: 20px;
+}
+
+::selection {
+	background-color: $blue;
+	color: $white;
+}
+
+* {
+	box-sizing: border-box;
+	line-height: 1.14em;
+	@media screen and (min-width: $breakpoint-md) {
+		line-height: 1.46em;
+	}
+}
+
+
+body {
+	margin: 0;
+	color: $dark-blue;
+	overflow-x: hidden;
+	font-family: $font-family-base;
+	font-weight: 400;
+	font-size: var(--wp--preset--font-size--normal);
+}
+
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left !important;
+}
+
+.container {
+	display: block;
+	width: 100%;
+	padding-left: var(--container-padding);
+	padding-right: var(--container-padding);
+	margin-left: auto;
+	margin-right: auto;
+	max-width: calc(var(--container-xxlarge) + var(--container-padding) * 2);
+}
+
+.container-xxsmall {
+	max-width: calc(var(--container-xxsmall) + var(--container-padding) * 2);
+}
+
+.container-xsmall {
+	max-width: calc(var(--container-xsmall) + var(--container-padding) * 2);
+}
+
+.container-small {
+	max-width: calc(var(--container-small) + var(--container-padding) * 2);
+}
+
+.container-large {
+	max-width: calc(var(--container-large) + var(--container-padding) * 2);
+}
+
+.container-xlarge {
+	max-width: calc(var(--container-xlarge) + var(--container-padding) * 2);
+}
+
+.container-xxlarge {
+	max-width: calc(var(--container-xxlarge) + var(--container-padding) * 2);
+}
+
+.container-full {
+	padding: 0 var(--container-padding);
+	max-width: unset;
+}
+
+#content {
+	@media screen and (max-width: $breakpoint-sm) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	> *:not(.contentify-block):not(.top-page):not(.large-content) {
+		@extend .container;
+		@media screen and (min-width: $breakpoint-sm) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		&:first-of-type {
+			padding-top: 4em;
+		}
+
+		&:last-of-type {
+			padding-bottom: 4em;
+		}
+	}
+}
+
+//.stretched-container {
+//	position: relative;
+//
+//	.stretched-link::after {
+//		content: "";
+//		position: absolute;
+//		top: 0;
+//		left: 0;
+//		width: 100%;
+//		height: 100%;
+//	}
+//}
+
+.contentify-block {
+	position: relative;
+	z-index: 0;
+	overflow: hidden;
+}
+
+.excerpt {
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+#breadcrumbs {
+	padding: 1em 0;
+	font-size: 0.875rem;
+	font-weight: 400;
+
+	.breadcrumb_last {
+		font-weight: 900;
+	}
+}

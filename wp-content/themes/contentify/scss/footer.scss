@@ -1,0 +1,142 @@
+@use './inc/variables' as *;
+@use './inc/components/titles' as *;
+
+#colophon {
+	background-color: $dark-blue;
+	color: $white;
+
+	a {
+		@extend %hidden-link;
+	}
+
+	.footer--body {
+		padding: 40px 0;
+
+		@media screen and (min-width: $breakpoint-md) {
+			padding: 50px 0;
+		}
+
+		> *:not(:first-child) {
+			border-top: 1px solid currentColor;
+		}
+
+		.body--header {
+			--header-gap: clamp(2em, 2.9vw, 50px);
+			padding: 30px 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: var(--header-gap);
+
+			> * {
+				display: flex;
+				gap: 20px var(--header-gap);
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+
+			.header--social {
+				max-width: 294px;
+
+				i {
+					font-size: clamp(30px, 2.4vw, 40px);
+				}
+			}
+
+			.header--call-to-actions {
+				display: flex;
+			}
+		}
+
+		.body--links {
+			--gap: clamp(2em, 7.1%, 103px);
+
+			padding: 50px 0;
+			display: flex;
+			flex-direction: column;
+			gap: var(--gap);
+
+			@media screen and (min-width: $breakpoint-md) {
+				flex-direction: row;
+				justify-content: center;
+			}
+
+			.infos--contact {
+				min-width: 0;
+				max-width: 270px;
+			}
+
+			.menu-footer {
+				gap: var(--gap);
+				column-count: 2;
+
+				//padding: 1em 1em 1em 4em;
+				//margin: 2em;
+				//border: solid 1px;
+				//list-style-type: none;
+				//display: grid;
+				//grid-gap: 0 2em;
+				//padding: 1em;
+				//grid-template-columns: 0 auto auto 1fr; /* last one set to use all room left */
+				//grid-auto-flow: column;
+				//
+				///* span a first-element throgh all rows , to be injected and updated from server side or via javascript on the fly */
+				//&::before {
+				//	content: '';
+				//	grid-column: 1;
+				//	/* short hand : grid-row:1/4;*/
+				//	grid-row-start: 1;
+				//	grid-row-end: 4; /* value to updated to match row numbers + 1 */
+				//}
+
+				@media screen and (min-width: $breakpoint-sm) {
+					column-count: 3;
+				}
+
+				@media screen and (min-width: $breakpoint-lg) {
+					column-count: 4;
+				}
+
+				> li {
+					width: max-content;
+					margin-bottom: 50px;
+					break-inside: avoid;
+
+					&.menu-item-has-children {
+						> a {
+							margin-bottom: 0.5em;
+						}
+
+						.sub-menu li:not(:last-child) {
+							margin-bottom: 0.5em;
+						}
+					}
+
+					> a {
+						display: inline-block;
+						font-weight: 700;
+						border-bottom: 2px solid currentColor;
+						width: max-content;
+					}
+				}
+			}
+		}
+
+		.body--footer {
+			padding: 30px 0;
+
+			.menu-mentions {
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+				gap: clamp(1em, 10vw, 50px);
+
+				a {
+					@extend .title;
+					@extend .infos;
+				}
+			}
+		}
+	}
+}

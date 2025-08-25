@@ -1,0 +1,30 @@
+@use '../variables' as *;
+
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 1.3125rem;
+
+	* {
+		font: inherit;
+	}
+
+	.form-row {
+		display: flex;
+		gap: 1.0625rem;
+		@media screen and (min-width: $breakpoint-md) {
+			> * {
+				width: 50% !important;
+			}
+		}
+		@media screen and (max-width: $breakpoint-sm) {
+			flex-wrap: wrap;
+		}
+	}
+}
+
+.wpcf7-form .cf7-flkhp {
+	position: absolute;
+	left: -200vw;
+}
