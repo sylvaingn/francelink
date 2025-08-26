@@ -6,8 +6,7 @@
     "scripts": {
         "block": "node block_generator.js",
         "prod": "gulp build",
-        "dev": "gulp watch",
-        "fa": "npm install '@awesome.me/kit-6115888835@latest'"
+        "dev": "gulp watch"
     },
     "author": "",
     "devDependencies": {
@@ -37,7 +36,6 @@
         "sass": "^1.64.2"
     },
     "dependencies": {
-        "@awesome.me/kit-6115888835": "^1.0.11",
         "gsap": "^3.12.2",
         "swiper": "^10.3.1"
     }

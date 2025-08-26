@@ -1,4 +1,5 @@
 <?php
+
 if (!function_exists('get_field')) return;
 
 require_once get_template_directory() . '/inc/acf.php';
