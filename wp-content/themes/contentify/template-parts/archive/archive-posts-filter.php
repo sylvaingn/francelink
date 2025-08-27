@@ -32,25 +32,25 @@ function checkActiveSort($sort = null)
 
 
 <div class="actualities large-content" data-nonce="<?php echo esc_attr($ajax_nonce); ?>">
-    <div class="actualities--sorter">
-        <div class="container container-large">
-            <div class="sorter--wrapper">
-                <input type="search" value="<?php echo $_GET['search'] ?? ''; ?>"
-                       placeholder="<?php echo __('Trouver un article', TEXT_DOMAIN); ?>">
-
-<!--                <div class="sorter--selects">-->
-<!--                    <button class="btn-sorter newer-posts --><?php //echo checkActiveSort() === false ? 'active' : checkActiveSort('newer') ?><!--">--><?php //echo __('Nouveau', TEXT_DOMAIN); ?><!--</button>-->
-<!--                    <button class="btn-sorter older-posts --><?php //echo checkActiveSort('older') ?><!--">--><?php //echo __('Plus anciens', TEXT_DOMAIN); ?><!--</button>-->
-<!--                </div>-->
-            </div>
-        </div>
-
-    </div>
+<!--    <div class="actualities--sorter">-->
+<!--        <div class="container container-xxlarge">-->
+<!--            -->
+<!--        </div>-->
+<!---->
+<!--    </div>-->
     <div class="actualities--posts">
-        <div class="container container-large">
+        <div class="container container-xxlarge">
             <div class="actualities--wrapper">
                 <div class="posts--filters">
-                    <div class="filters--head title sub-title icon-arrow"><i class="fa-kit fa-filter"></i><?php echo __('Filtrer', TEXT_DOMAIN); ?></div>
+                    <div class="sorter--wrapper">
+                        <div class="title sub-title"><i
+                                    class="fa-kit fa-filter"></i><?php echo __('Rechercher', TEXT_DOMAIN); ?></div>
+
+                        <input type="search" value="<?php echo $_GET['search'] ?? ''; ?>"
+                               placeholder="<?php echo __('Trouver une question', TEXT_DOMAIN); ?>">
+                    </div>
+                    <div class="filters--head title sub-title icon-arrow"><i
+                                class="fa-kit fa-filter"></i><?php echo __('Filtrer', TEXT_DOMAIN); ?></div>
                     <div class="filters--items">
                         <div>
                             <div data-all-cat
@@ -91,7 +91,7 @@ function checkActiveSort($sort = null)
 
                     <div class="loading-overlay">
                         <?php for ($i = 0; $i < DEFAULT_POSTS_PER_PAGE; $i++): ?>
-                            <?php get_template_part('template-parts/loop/card-post-loading'); ?>
+                            <?php get_template_part('template-parts/loop/card-' . get_post_type() . '-loading'); ?>
                         <?php endfor; ?>
                     </div>
                 </div>

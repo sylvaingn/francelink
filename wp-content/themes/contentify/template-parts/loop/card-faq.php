@@ -8,6 +8,6 @@ $terms_slugs = array_map(function ($term) {
 ?>
 <div class="faq-card stretched-container" data-post-terms="<?php echo implode(',', $terms_slugs); ?>">
     <div class="faq-card--content">
-        <a href="<?php the_permalink(); ?>" class="title stretched-link"><?php the_title(); ?></a>
+        <a href="<?php the_permalink(); ?>" class="title subtitle stretched-link"><?php the_title(); ?></a>
     </div>
 </div>

@@ -59,23 +59,42 @@
 	&:hover .btn {
 		@extend %btn-primary-hover;
 	}
+
+	&.post-card-loading {
+		i {
+			display: inline-block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			height: 40px;
+			width: 40px;
+			transform: translate(-50%, -50%);
+			transform-origin: center;
+			background: url(../assets/img/logo.svg) center / contain no-repeat;
+			animation: loading 3s linear infinite;
+		}
+
+		.post-card--content {
+			height: 200px;
+		}
+	}
 }
 
-.post-card.post-card-loading {
-	i {
-		display: inline-block;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		height: 40px;
-		width: 40px;
-		transform: translate(-50%, -50%);
-		transform-origin: center;
-		background: url(../assets/img/logo.svg) center / contain no-repeat;
-		animation: loading 3s linear infinite;
+
+.faq-card {
+	padding: 1em 2em;
+	background-color: $lighter-gray;
+	border-radius: 12px;
+
+	a {
+		@extend %hidden-link;
 	}
 
-	.post-card--content {
-		height: 200px;
+	&.faq-card-loading {
+		padding: 0;
+
+		.faq-card--content {
+			height: 50px;
+		}
 	}
 }

@@ -15,5 +15,5 @@ $fields = $block_obj->get_block_fields();
 ?>
 
 <div <?php echo $block_obj->body_block(''); ?>>
-    <div class="container container-large"></div>
+    <div class="container container-xxlarge"></div>
 </div>

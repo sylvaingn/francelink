@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Récupération rapide des éléments existants
-    const searchInput = document.querySelector('.actualities--sorter input[type="search"]');
+    const searchInput = document.querySelector('.sorter--wrapper input[type="search"]');
     const newerFilter = document.querySelector('.sorter--selects .newer-posts');
     const olderFilter = document.querySelector('.sorter--selects .older-posts');
     const postsFilters = document.querySelector('.posts--filters');

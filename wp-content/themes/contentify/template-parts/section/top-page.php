@@ -27,7 +27,7 @@ $gab_logo_id = get_field('gab-logo', get_the_ID());
                     <?php echo wp_get_attachment_image($gab_logo_id, 'large') ?>
                 </div>
             <?php endif; ?>
-            <h1 class="section-title lower-line"><?php echo $title; ?></h1>
+            <h1 class="big-title"><?php echo $title; ?></h1>
         </div>
     </div>
 </div>

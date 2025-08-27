@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
     <?php wp_head(); ?>
 </head>
 
@@ -27,28 +28,32 @@
                     'theme_location' => 'menu-primary',
                     'container' => false,
                     'menu_class' => '',
-                    'items_wrap' => '<nav><ul class="menu menu-primary">%3$s</ul></nav>',
+                    'items_wrap' => '<nav><ul class="contentify-menu menu menu-primary">%3$s</ul></nav>',
                 ));
                 ?>
 
-                    <a href="https://status.francelink.net" target="_blank" rel="noopener"
-                       class="btn btn-primary"><?php echo __("Notre page de status", TEXT_DOMAIN) ?></a>
+                <a href="https://status.francelink.net" target="_blank" rel="noopener"
+                   class="btn btn-primary status-link"><?php echo __("Notre page de status", TEXT_DOMAIN) ?></a>
+
+                <div class="menu-burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
 
-            <div class="burger">
-            </div>
+
         </div>
     </div>
     <div id="masthead--burger" class="dashed-border top">
         <div class="container">
             <div class="burger--wrapper">
-                test
                 <?php
                 wp_nav_menu(array(
                     'theme_location' => 'menu-primary',
                     'container' => false,
                     'menu_class' => '',
-                    'items_wrap' => '<nav><ul class="menu menu-primary">%3$s</ul></nav>',
+                    'items_wrap' => '<nav><ul class="contentify-menu menu menu-primary">%3$s</ul></nav>',
                 ));
                 ?>
             </div>

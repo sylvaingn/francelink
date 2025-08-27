@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
     resizeObserver.observe(document.body)
 
     const masthead = document.querySelector('#masthead');
-    const burger = masthead?.querySelector('.burger');
+    const burger = masthead?.querySelector('.menu-burger');
     const mastheadMobile = masthead?.querySelector('#masthead--burger');
     const hasChildrenEls = masthead?.querySelectorAll('.menu-item-has-children');
 

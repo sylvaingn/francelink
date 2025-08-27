@@ -4,7 +4,7 @@
 	display: block;
 	font-size: var(--wp--preset--font-size--button);
 	font-family: $font-family-btn;
-	line-height: 1.1em;
+	//line-height: 1.1em;
 	font-weight: 400;
 	width: max-content;
 	height: max-content;
@@ -13,7 +13,7 @@
 	border: 1px solid currentColor;
 	padding: 0.3em 0.875em;
 	border-radius: 12px;
-	transition: all 0.4s $cubic-transition;
+	transition: border-color 0.4s $cubic-transition,color 0.4s $cubic-transition,background-color 0.4s $cubic-transition;
 
 	&.btn-primary {
 		background: $primary;
@@ -42,7 +42,6 @@
 	border: none;
 	background: $light-gray;
 	font: inherit;
-	font-size: 14px;
 	padding: 0.56em 0.74em;
 	border-radius: 8px;
 	text-align: center;
@@ -67,7 +66,6 @@
 	border: 1px solid currentColor;
 	text-align: center;
 	border-radius: 8px;
-	font-size: 14px;
 	overflow-wrap: break-word;
 	background-color: $white;
 	transition: all 0.3s $cubic-transition;

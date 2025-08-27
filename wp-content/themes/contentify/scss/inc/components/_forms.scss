@@ -8,6 +8,10 @@ form {
 
 	* {
 		font: inherit;
+
+		&::-webkit-input-placeholder {
+			color: $black;
+		}
 	}
 
 	.form-row {
@@ -22,9 +26,56 @@ form {
 			flex-wrap: wrap;
 		}
 	}
+
+	input:not([type="submit"]):not([type="checkbox"]), select, textarea {
+		width: 100%;
+		padding: 1.3125em 1.75em;
+		border: 1px solid $primary;
+		border-radius: 8px;
+	}
+
+	.checkbox-label {
+		display: flex;
+		align-items: flex-start;
+		gap: 0.2em;
+		font-size: 0.75rem;
+	}
+
+	input[type="checkbox"]:checked {
+		accent-color: $primary;
+	}
+
+	textarea {
+		max-width: 100%;
+		max-height: 300px;
+	}
+
+	select {
+		--icon-width: 3em;
+
+		padding-right: calc(1.75em + var(--icon-width));
+		appearance: none;
+	}
 }
 
 .wpcf7-form .cf7-flkhp {
 	position: absolute;
 	left: -200vw;
+}
+
+input[type="search"] {
+	outline: 1px solid;
+	outline-color: transparent;
+	border: none;
+	background: $lighter-gray;
+	padding: 9px 13px;
+	border-radius: 12px;
+	max-width: 100%;
+	font: inherit;
+	font-size: 14px;
+	transition: outline-color 0.3s $cubic-transition;
+
+	&:focus, &:focus-visible, &:hover {
+		outline-color: $primary;
+	}
 }

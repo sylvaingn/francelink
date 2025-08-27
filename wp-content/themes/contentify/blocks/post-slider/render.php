@@ -58,9 +58,9 @@ $button_labels = [
 <div <?php echo $block_obj->body_block(sprintf('posts-slider-block large-content %s', $display_full ? 'full' : '')); ?>>
     <?php echo $block_obj->get_illustrations(); ?>
 
-    <div class="container <?php echo $display_full ? 'container-full' : 'container-large'; ?>">
+    <div class="container <?php echo $display_full ? 'container-full' : 'container-xxlarge'; ?>">
 
-        <?php echo $display_full ? '' : $block_obj->get_block_title('section-title lower-line'); ?>
+        <?php echo $display_full ? '' : $block_obj->get_block_title('section-title'); ?>
 
         <div class="posts-slider--slider <?php echo esc_attr($items_template); ?>">
             <div class="swiper swiper-posts">

@@ -20,10 +20,10 @@
 
 * {
 	box-sizing: border-box;
-	line-height: 1.14em;
-	@media screen and (min-width: $breakpoint-md) {
-		line-height: 1.46em;
-	}
+	line-height: 1.275em;
+	//@media screen and (min-width: $breakpoint-md) {
+	//	line-height: 1.46em;
+	//}
 }
 
 
@@ -35,7 +35,6 @@ body {
 	font-weight: 400;
 	font-size: var(--wp--preset--font-size--normal);
 }
-
 
 .text-center {
 	text-align: center;
@@ -90,17 +89,32 @@ body {
 		padding-right: 0;
 	}
 
-	> *:not(.contentify-block):not(.top-page):not(.large-content) {
-		@extend .container;
-
-		&:first-child {
-			padding-top: 4rem;
-		}
-
-		&:last-child {
-			padding-bottom: 4rem;
-		}
-	}
+	//> *:not(.contentify-block):not(.top-page):not(.large-content) {
+	//	display: block;
+	//	//width: 100%;
+	//	margin-left: auto;
+	//	margin-right: auto;
+	//	max-width: calc(var(--container-large) + var(--container-padding) * 2);
+	//
+	//	&:not(.wp-block-code){
+	//		padding-left: var(--container-padding);
+	//		padding-right: var(--container-padding);
+	//	}
+	//
+	//	&.wp-block-code{
+	//		margin-left: var(--container-padding);
+	//		margin-right: var(--container-padding);
+	//	}
+	//
+	//
+	//	&:first-child {
+	//		padding-top: 4rem;
+	//	}
+	//
+	//	&:last-child {
+	//		padding-bottom: 4rem;
+	//	}
+	//}
 }
 
 //.stretched-container {
@@ -122,11 +136,45 @@ body {
 	overflow: hidden;
 }
 
+.contentify-block, .large-content {
+	width: 100vw;
+	margin-left: calc((100vw - 100%) / 2 * -1);
+}
+
 .excerpt {
 	display: -webkit-box;
 	-webkit-line-clamp: 3;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
+}
+
+.contentify-menu {
+	display: flex;
+	align-items: center;
+	gap: 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+code {
+	//font-family: $font-family-monospace;
+	background-color: $lighter-gray;
+	padding: 0.2em 0.4em;
+	border-radius: 6px;
+	color: $primary;
+}
+
+.wp-block-code {
+	background-color: $lighter-gray;
+
+	code {
+		background-color: transparent;
+		border-radius: 12px;
+		padding: 2em 1em;
+		overflow-x: auto;
+		color: $black;
+	}
 }
 
 #breadcrumbs {
@@ -178,7 +226,7 @@ body {
 		align-items: center;
 		justify-content: center;
 		padding: 42px 0;
-		min-height: 252px;
+		min-height: 180px;
 		text-align: center;
 
 		.gab-logo {
@@ -206,4 +254,9 @@ body {
 			overflow-wrap: anywhere;
 		}
 	}
+}
+
+#page-content {
+	padding-top: 4em;
+	padding-bottom: 4em;
 }

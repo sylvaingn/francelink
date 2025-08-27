@@ -9,6 +9,7 @@ $primary: #eb5d18;
 $secondary: #1D0B00;
 $black: #111111;
 $light-gray: #C9CEBD;
+$lighter-gray: #eff1ea;
 $white: #FFFFFF;
 
 $font-family-base: var(--wp--preset--font-family--base);
@@ -32,7 +33,7 @@ $cubic-transition: cubic-bezier(0.65, 0, 0.35, 1);
 
 %btn-primary-hover {
 	background-color: $white;
-	border-color: $white;
+	border-color: $primary;
 	color: $primary !important;
 }
 

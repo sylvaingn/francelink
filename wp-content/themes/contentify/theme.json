@@ -113,7 +113,7 @@
                 {
                     "name": "Gros titre",
                     "slug": "big-title",
-                    "size": "clamp(48px, 3.5vw, 64px)"
+                    "size": "clamp(38px, 3.5vw, 64px)"
                 },
                 {
                     "name": "Titre de section",
@@ -123,7 +123,7 @@
                 {
                     "name": "Sous-titre",
                     "slug": "subtitle",
-                    "size": "clamp(23px, 3.5vw, 25px)"
+                    "size": "clamp(18px, 3.5vw, 20px)"
                 },
                 {
                     "name": "Corps de texte",
