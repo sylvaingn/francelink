@@ -70,42 +70,40 @@
                 {
                     "name": "Police des titres",
                     "slug": "title",
-                    "fontFamily": "'Oswald', sans-serif",
+                    "fontFamily": "'Epilogue', sans-serif",
                     "fontFace": [
                         {
-                            "fontFamily": "Oswald",
-                            "fontWeight": "300",
-                            "fontStyle": "normal",
-                            "fontStretch": "normal",
-                            "src": [
-                                "file:./assets/fonts/Oswald-Light.woff2"
-                            ]
-                        },
-                        {
-                            "fontFamily": "Oswald",
+                            "fontFamily": "Epilogue",
                             "fontWeight": "500",
                             "fontStyle": "normal",
                             "fontStretch": "normal",
                             "src": [
-                                "file:./assets/fonts/Oswald-Medium.woff2"
+                                "file:./assets/fonts/Epilogue-Medium.woff2"
                             ]
                         },
                         {
-                            "fontFamily": "Oswald",
-                            "fontWeight": "600",
+                            "fontFamily": "Epilogue",
+                            "fontWeight": "800",
                             "fontStyle": "normal",
                             "fontStretch": "normal",
                             "src": [
-                                "file:./assets/fonts/Oswald-SemiBold.woff2"
+                                "file:./assets/fonts/Epilogue-ExtraBold.woff2"
                             ]
-                        },
+                        }
+                    ]
+                },
+                {
+                    "name": "Police des textes",
+                    "slug": "base",
+                    "fontFamily": "'Space Grotesk', sans-serif",
+                    "fontFace": [
                         {
-                            "fontFamily": "Oswald",
-                            "fontWeight": "700",
+                            "fontFamily": "Space Grotesk",
+                            "fontWeight": "400",
                             "fontStyle": "normal",
                             "fontStretch": "normal",
                             "src": [
-                                "file:./assets/fonts/Oswald-Bold.woff2"
+                                "file:./assets/fonts/SpaceGrotesk-Regular.woff2"
                             ]
                         }
                     ]
@@ -115,7 +113,7 @@
                 {
                     "name": "Gros titre",
                     "slug": "big-title",
-                    "size": "clamp(30px, 3.5vw, 52px)"
+                    "size": "clamp(48px, 3.5vw, 64px)"
                 },
                 {
                     "name": "Titre de section",
@@ -135,7 +133,7 @@
                 {
                     "name": "Bouton",
                     "slug": "button",
-                    "size": "18px"
+                    "size": "16px"
                 }
             ],
             "fontStyle": true,

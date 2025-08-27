@@ -5,9 +5,17 @@
 	display: block;
 	height: clamp(36px, 5vw, 86px);
 	width: clamp(138px, 15.3vw, 180px);
-	mask: var(--logo-url) no-repeat 50%;
-	mask-size: contain;
-	background-color: currentColor;
+
+	&:not(.masked){
+		background: var(--logo-url) no-repeat 50%;
+		background-size: contain;
+	}
+
+	&.masked {
+		mask: var(--logo-url) no-repeat 50%;
+		mask-size: contain;
+		background-color: currentColor;
+	}
 }
 
 #masthead {

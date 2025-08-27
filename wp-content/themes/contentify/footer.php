@@ -5,7 +5,7 @@
         <div class="footer--body">
             <div class="body--header">
                 <div class="header--infos">
-                    <a href="<?php echo get_home_url(); ?>" class="site-logo"
+                    <a href="<?php echo get_home_url(); ?>" class="site-logo masked"
                        style="--logo-url:url('<?php echo getCustomLogoUrl(); ?>');">
                     </a>
                     <a href="https://status.francelink.net" target="_blank" rel="noopener"

@@ -5,21 +5,32 @@
 	font-size: var(--wp--preset--font-size--button);
 	font-family: $font-family-btn;
 	line-height: 1.1em;
-	text-transform: uppercase;
-	font-weight: 500;
+	font-weight: 400;
 	width: max-content;
 	height: max-content;
 	text-decoration: none;
 	color: inherit;
-	border: 2px solid currentColor;
-	padding: 0.3em 0.5em;
+	border: 1px solid currentColor;
+	padding: 0.3em 0.875em;
+	border-radius: 12px;
 	transition: all 0.4s $cubic-transition;
 
 	&.btn-primary {
-		color: $primary !important;
+		background: $primary;
+		color: $white !important;
 
 		&:hover {
 			@extend %btn-primary-hover;
+		}
+	}
+
+	&.btn-secondary {
+		background: $white;
+		border-color: $white;
+		color: $black !important;
+
+		&:hover {
+			@extend %btn-secondary-hover;
 		}
 	}
 }
