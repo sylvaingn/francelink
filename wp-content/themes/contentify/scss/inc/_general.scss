@@ -117,18 +117,18 @@ body {
 	//}
 }
 
-//.stretched-container {
-//	position: relative;
-//
-//	.stretched-link::after {
-//		content: "";
-//		position: absolute;
-//		top: 0;
-//		left: 0;
-//		width: 100%;
-//		height: 100%;
-//	}
-//}
+.stretched-container {
+	position: relative;
+
+	.stretched-link::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
 
 .contentify-block {
 	position: relative;
