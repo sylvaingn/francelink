@@ -25,8 +25,20 @@ function contentify_scripts()
     }
 
     if (is_archive()) {
+        $ajax_nonce = wp_create_nonce('my_ajax_nonce');
+
         wp_enqueue_style('contentify-archive-style', DIST_URL . 'archives/archive.css', array(), THEME_VERSION);
         wp_enqueue_script('contentify-archive-js', DIST_URL . 'archives/archive-js.js', $scripts_deps, THEME_VERSION, true);
+
+        wp_localize_script(
+            'contentify-archive-js',
+            'myAjaxVars', // Nom de l'objet JS
+            [
+                'ajaxUrl' => admin_url('admin-ajax.php'),
+                'ajaxNonce' => $ajax_nonce,
+                'currentPostType' => get_post_type()
+            ]
+        );
     }
 }
 

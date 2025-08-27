@@ -5,6 +5,7 @@ if (!function_exists('get_field')) return;
 require_once get_template_directory() . '/inc/acf.php';
 require_once get_template_directory() . '/inc/constants.php';
 require_once get_template_directory() . '/inc/init.php';
+require_once get_template_directory() . '/inc/posts_feed.php';
 require_once get_template_directory() . '/inc/toolbar.php';
 require_once get_template_directory() . '/inc/scripts.php';
 require_once get_template_directory() . '/inc/pagination.php';

@@ -1,1 +1,81 @@
 @use '../variables' as *;
+
+.post-card {
+	display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+	overflow: hidden;
+
+	.post-card--thumbnail {
+		position: relative;
+		padding-bottom: 76.37%;
+		background: $light-gray;
+
+		img {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	.post-card--content {
+		padding: 25px 19px;
+		background: rgba($secondary, 0.05);
+		flex-grow: 1;
+
+		> *:not(:last-child) {
+			margin-bottom: 15px;
+		}
+
+		.title {
+			color: $primary;
+		}
+
+		.excerpt {
+			font-size: 12px;
+			color: $secondary;
+		}
+
+		.post-card--bottom {
+			margin-top: 2em;
+			display: flex;
+			justify-content: space-between;
+
+			.post-date, .attached-ga {
+				font-size: 14px;
+			}
+
+			.attached-gab {
+				display: inline-block;
+				text-align: right;
+			}
+		}
+	}
+
+	&:hover .btn {
+		@extend %btn-primary-hover;
+	}
+}
+
+.post-card.post-card-loading {
+	i {
+		display: inline-block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		height: 40px;
+		width: 40px;
+		transform: translate(-50%, -50%);
+		transform-origin: center;
+		background: url(../assets/img/logo.svg) center / contain no-repeat;
+		animation: loading 3s linear infinite;
+	}
+
+	.post-card--content {
+		height: 200px;
+	}
+}

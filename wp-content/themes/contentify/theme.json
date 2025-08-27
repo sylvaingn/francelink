@@ -113,8 +113,13 @@
             ],
             "fontSizes": [
                 {
-                    "name": "Titre",
-                    "slug": "main-title",
+                    "name": "Gros titre",
+                    "slug": "big-title",
+                    "size": "clamp(30px, 3.5vw, 52px)"
+                },
+                {
+                    "name": "Titre de section",
+                    "slug": "section-title",
                     "size": "clamp(23px, 3.5vw, 38px)"
                 },
                 {

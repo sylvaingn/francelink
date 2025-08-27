@@ -1,1 +1,200 @@
 @use '../inc/variables' as *;
+
+.actualities {
+	.actualities--sorter {
+		padding: 49px 0;
+		background: $white;
+
+		.sorter--wrapper {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 1em;
+
+			@media screen and (max-width: $breakpoint-md) {
+				flex-direction: column;
+			}
+		}
+
+		input[type="search"] {
+			width: 100%;
+
+			@media screen and (min-width: $breakpoint-md) {
+				width: 415px;
+			}
+		}
+
+		@media screen and (min-width: $breakpoint-md) {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 1em;
+		}
+
+		.sorter--selects {
+			display: flex;
+			align-items: center;
+			gap: 1em;
+		}
+	}
+
+	.actualities--posts {
+		padding: 3em 0;
+	}
+
+	.actualities--wrapper {
+		@media screen and (min-width: $breakpoint-md) {
+			display: flex;
+			gap: 2em;
+		}
+	}
+
+	.posts--filters {
+		position: relative;
+		width: 100%;
+
+		@media screen and (min-width: $breakpoint-md) {
+			max-width: 200px;
+		}
+
+		.filters--head {
+			color: $black;
+			margin-bottom: 0.6em;
+
+			i {
+				margin-right: 0.1em;
+			}
+
+			@media screen and (max-width: $breakpoint-md) {
+				padding: 0.4em;
+				text-align: center;
+				border: 1px solid $secondary;
+				border-radius: 8px;
+			}
+		}
+
+		.filters--items {
+			@media screen and (max-width: $breakpoint-md) {
+				position: absolute;
+				z-index: 10;
+				top: 100%;
+				left: 0;
+				width: 100%;
+				height: max-content;
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.3s $cubic-transition;
+			}
+
+			> div {
+				padding: 1em 0;
+				display: flex;
+				flex-direction: column;
+				gap: 12px;
+
+				@media screen and (max-width: $breakpoint-md) {
+					background: $white;
+					border-radius: 0 0 8px 8px;
+					box-shadow: 0 12px 7px 6px rgba($black, 0.1);
+				}
+
+				.single-filter {
+					&.has-children .btn-filter.active {
+						border-bottom-left-radius: 0;
+						border-bottom-right-radius: 0;
+					}
+
+					.children-categories--container {
+						height: max-content;
+						//max-height: 0;
+						overflow: hidden;
+
+						ul {
+							display: flex;
+							flex-direction: column;
+							gap: 3px;
+							padding: 5px 9px;
+							background: #F2F2F2;
+							text-align: center;
+							border-radius: 0 0 8px 8px;
+
+							li {
+								font-size: 12px;
+								padding: 0.4em 0;
+								cursor: pointer;
+
+								&.active, &:hover {
+									color: $primary;
+									font-weight: 600;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+	.posts--container {
+		width: 100%;
+		height: auto;
+	}
+
+	.posts--wrapper, .loading-overlay {
+		--nb-column: 3;
+		--gap: 15px;
+
+		display: flex;
+		//align-items: flex-start;
+		flex-wrap: wrap;
+		gap: var(--gap);
+		width: 100%;
+
+		@media screen and (max-width: $breakpoint-md) {
+			--nb-column: 2;
+		}
+
+		@media screen and (max-width: $breakpoint-sm) {
+			--nb-column: 1;
+		}
+
+		> * {
+			width: calc((100% - (var(--nb-column) - 1) * var(--gap)) / var(--nb-column));
+		}
+	}
+
+	.no-results {
+		padding: 2em;
+		border-radius: 8px;
+		background: $light-gray;
+		text-align: center;
+	}
+
+	.loading-overlay--container {
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+
+		.loading-overlay {
+			opacity: 0;
+			pointer-events: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-radius: 8px;
+			width: 100%;
+			height: max-content;
+			background: $white;
+			//transform: translateX(100px);
+			transition: opacity 0.3s $cubic-transition, transform 0.3s $cubic-transition;
+			//background: linear-gradient(180deg, rgba($lighter-gray, 0.9) calc(0% + 200px), rgba($white, 1) 100%);
+
+			&.visible {
+				opacity: 1;
+				pointer-events: visible;
+				//transform: translateX(0);
+			}
+		}
+	}
+}

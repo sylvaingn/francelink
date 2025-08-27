@@ -23,3 +23,55 @@
 		}
 	}
 }
+
+.btn-sorter {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	border: none;
+	background: $light-gray;
+	font: inherit;
+	font-size: 14px;
+	padding: 0.56em 0.74em;
+	border-radius: 8px;
+	text-align: center;
+	transition: background-color 0.3s $cubic-transition;
+
+	&.older-posts::after {
+		transform: scaleY(-1);
+	}
+
+	&:hover, &.active {
+		background-color: #dddddd;
+	}
+
+	&.active {
+		pointer-events: none;
+	}
+}
+
+.btn-filter {
+	padding: 8px 4px;
+	color: $secondary;
+	border: 1px solid currentColor;
+	text-align: center;
+	border-radius: 8px;
+	font-size: 14px;
+	overflow-wrap: break-word;
+	background-color: $white;
+	transition: all 0.3s $cubic-transition;
+	cursor: pointer;
+
+	&.active, &:hover {
+		color: $primary;
+		background-color: rgba($primary, 0.2);
+	}
+}
+
+.card-tag {
+	display: inline-block;
+	background: $secondary;
+	color: $white;
+	padding: 0 0.4em;
+	border-radius: 5px;
+}
