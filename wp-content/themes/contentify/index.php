@@ -7,6 +7,10 @@ $query_area_after = ContentifyTheme\Blocks\Blocks::get_instance()->get_block_are
 
 <?php get_template_part('template-parts/section/top-page'); ?>
 
+    <div class="container container-large">
+        <?php echo get_breadcrumb(); ?>
+    </div>
+
 <?php if ($query_area_before !== null) : ?>
     <?= apply_filters('the_content', $query_area_before->post_content); ?>
 <?php endif; ?>

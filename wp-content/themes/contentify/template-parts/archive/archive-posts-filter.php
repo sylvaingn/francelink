@@ -30,14 +30,17 @@ function checkActiveSort($sort = null)
 
 <?php get_template_part('template-parts/section/top-page'); ?>
 
+<div class="container container-xxlarge">
+    <?php echo get_breadcrumb(); ?>
+</div>
 
 <div class="actualities large-content" data-nonce="<?php echo esc_attr($ajax_nonce); ?>">
-<!--    <div class="actualities--sorter">-->
-<!--        <div class="container container-xxlarge">-->
-<!--            -->
-<!--        </div>-->
-<!---->
-<!--    </div>-->
+    <!--    <div class="actualities--sorter">-->
+    <!--        <div class="container container-xxlarge">-->
+    <!--            -->
+    <!--        </div>-->
+    <!---->
+    <!--    </div>-->
     <div class="actualities--posts">
         <div class="container container-xxlarge">
             <div class="actualities--wrapper">

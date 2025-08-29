@@ -45,18 +45,20 @@
             </div>
         </div>
     </div>
-    <div class="colophon--mentions">
-        <div class="container container-xxlarge">
-            <?php
-            wp_nav_menu(array(
-                'theme_location' => 'menu-mentions',
-                'container' => false,
-                'menu_class' => '',
-                'items_wrap' => '<nav><ul class="contentify-menu menu menu-mentions">%3$s</ul></nav>',
-            ));
-            ?>
+    <?php if (has_nav_menu('menu-mentions')): ?>
+        <div class="colophon--mentions">
+            <div class="container container-xxlarge">
+                <?php
+                wp_nav_menu(array(
+                    'theme_location' => 'menu-mentions',
+                    'container' => false,
+                    'menu_class' => '',
+                    'items_wrap' => '<nav><ul class="contentify-menu menu menu-mentions">%3$s</ul></nav>',
+                ));
+                ?>
+            </div>
         </div>
-    </div>
+    <?php endif; ?>
 </footer>
 
 <?php

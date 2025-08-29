@@ -182,6 +182,15 @@ code {
 	font-size: 0.875rem;
 	font-weight: 400;
 
+	a{
+		color: $primary;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
 	.breadcrumb_last {
 		font-weight: 900;
 	}
