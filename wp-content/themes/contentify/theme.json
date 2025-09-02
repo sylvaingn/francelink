@@ -113,7 +113,7 @@
                 {
                     "name": "Gros titre",
                     "slug": "big-title",
-                    "size": "clamp(38px, 3.5vw, 64px)"
+                    "size": "clamp(38px, 4.8vw, 84px)"
                 },
                 {
                     "name": "Titre de section",
