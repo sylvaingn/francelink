@@ -27,6 +27,7 @@ function my_ajax_fetch_actualities(): void
         'post_type' => $post_type,
         'posts_per_page' => DEFAULT_POSTS_PER_PAGE,
         'paged' => $paged,
+        'post_status' => 'publish'
     ];
 
     // Recherche
