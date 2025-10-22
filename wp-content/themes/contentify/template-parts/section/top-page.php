@@ -20,7 +20,7 @@ $gab_logo_id = get_field('gab-logo', get_the_ID());
     <div class="top-page--thumbnail">
         <?php echo $thumbnail; ?>
     </div>
-    <div class="container">
+    <div class="container container-large">
         <div class="top-page--content">
             <?php if ($gab_logo_id && $gab_logo_id !== ''): ?>
                 <div class="gab-logo">
