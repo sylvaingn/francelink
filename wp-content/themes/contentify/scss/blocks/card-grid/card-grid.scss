@@ -1,0 +1,229 @@
+@use "../../inc/variables" as *;
+
+.card-grid-block {
+	--icon-width: 26px;
+	--space-icon: 16px;
+
+	padding: 3em 0;
+	text-align: center;
+
+	.section-title {
+		margin-bottom: 1rem;
+	}
+
+	.description {
+		font-weight: 500;
+		text-align: center;
+	}
+
+
+	.card-grid--wrapper {
+		&:not(.switched-title) {
+			.card-list--wrapper {
+				margin-top: 3rem;
+			}
+		}
+
+		&.switched-title {
+			padding: 2em 1em;
+			background: $light-primary;
+			border-radius: 10px;
+			@media screen and (min-width: $breakpoint-md) {
+				display: flex;
+				gap: 4em;
+				//text-align: left;
+				padding: 2em 3em;
+			}
+
+			.title--wrapper {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+
+				@media screen and (min-width: $breakpoint-md) {
+					max-width: 300px;
+				}
+
+				@media screen and (max-width: $breakpoint-md) {
+					margin-bottom: 3em;
+				}
+
+				.title {
+					color: $primary;
+					font-weight: 600;
+				}
+
+				.description--switched {
+					margin-top: 1em;
+				}
+			}
+		}
+	}
+
+	// On définit un mixin pour appliquer le réglage en fonction du nombre de colonnes
+
+	.card-list--wrapper {
+		--gap: 22px;
+
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--gap);
+		width: 100%;
+
+		&.layout-checklist_cards {
+			justify-content: center;
+		}
+
+		//&.layout-text_image_cards{
+		//	flex-direction: column;
+		//}
+		@media screen and (max-width: $breakpoint-md) {
+			--nb-column: 2 !important;
+		}
+
+		@media screen and (max-width: $breakpoint-sm) {
+			--nb-column: 1 !important;
+		}
+
+		> * {
+			width: calc((100% - ((#{var(--nb-column)} - 1) * var(--gap))) / #{var(--nb-column)});
+		}
+	}
+
+	.additional-infos {
+		width: 100%;
+		max-width: 925px;
+		border-radius: 8px;
+		margin: 2em auto 0;
+		padding: 2em;
+		background: $primary;
+		color: $white;
+		text-align: center;
+
+		> *:not(:last-child) {
+			margin-bottom: 1rem;
+		}
+
+		.infos--title {
+			font-weight: 600;
+		}
+
+		.infos--content {
+			font-size: 14px;
+		}
+
+		.infos--buttons {
+			margin-top: 2em;
+			display: flex;
+			justify-content: center;
+			gap: 1em;
+			flex-wrap: wrap;
+		}
+	}
+}
+
+.checklist-card,
+.text-image-card {
+	border-radius: 16px;
+	background: $white;
+	box-shadow: 0 0 20px 0 rgba($black, 0.07);
+
+	.card-title,
+	.card-content {
+		padding-left: calc(var(--icon-width) + var(--space-icon));
+	}
+
+	.card-title {
+		position: relative;
+		margin-bottom: 1.333em;
+		font-weight: 700;
+		color: $primary;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: var(--icon-width);
+			min-width: var(--icon-width);
+			border-radius: 50%;
+			background: url(../../../assets/img/check.svg) center / auto 42% no-repeat,
+			$lighter-gray;
+		}
+	}
+
+	.card-content {
+		color: initial;
+	}
+}
+
+.text-image-card {
+	padding: 20px;
+	margin-bottom: var(--gap);
+
+	.card-image {
+		position: relative;
+		padding-bottom: 76.1%;
+		margin-bottom: 1.5em;
+
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+.text-icon-card {
+	text-align: center;
+	padding: 2em;
+	border-radius: 8px;
+	background: $white;
+	box-shadow: 0 0 14px 3px rgba($black, 0.05);
+
+	.btn {
+		margin: 1em auto 0;
+	}
+
+	.text-icon-card--icon img {
+		display: block;
+		height: 50px;
+		width: auto;
+		margin: 0 auto 1em;
+	}
+
+	.text-icon-card--title {
+		font-weight: 600;
+		color: $primary;
+		margin-bottom: 0.5em;
+	}
+
+	.text-icon-card--content {
+		font-size: 14px;
+		color: $black;
+
+		li {
+			color: $black;
+			line-height: 1.7em;
+			display: inline-block;
+
+			&::before {
+				content: "";
+				display: inline-block;
+				height: 3px;
+				width: 3px;
+				border-radius: 50%;
+				background: currentColor;
+				margin-right: 0.6em;
+				vertical-align: middle;
+			}
+		}
+	}
+}
+
+.checklist-card {
+	padding: 32px;
+}

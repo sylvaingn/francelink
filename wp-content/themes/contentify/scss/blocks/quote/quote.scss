@@ -1,0 +1,57 @@
+@use '../../inc/variables' as *;
+
+.block--quote {
+    .container {
+        .block-title {
+            text-align: center;
+        }
+
+        .swiper {
+            margin-top: 56px;
+
+            .swiper-wrapper {
+                .quote-card {
+                    border-radius: 8px;
+                    border: 1px solid $primary;
+                    padding: 1.5em;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    gap: 30px;
+                    background-color: $white;
+
+                    .fa-quote {
+                        font-size: 47px;
+                        color: $primary;
+                    }
+
+                    .card--content {
+                        text-align: center;
+                        font-size: 14px;
+                        color: $black;
+                    }
+
+                    .card--name {
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.block--quote {
+    .swiper-pagination {
+        margin-top: 10px;
+
+        .swiper-pagination-bullet {
+            background: $light-primary;
+            opacity: 1;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: $primary;
+        }
+    }
+}

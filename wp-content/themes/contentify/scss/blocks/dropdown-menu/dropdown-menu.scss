@@ -1,0 +1,53 @@
+@use '../../inc/variables' as *;
+
+.block--dropdown-menu {
+	padding: 2em 0;
+
+	.main-title {
+		margin-bottom: 2em;
+	}
+
+	.dropdown-menu-item {
+		border-bottom: 1px solid rgb(227 227 227);
+
+		.header--dropdown-menu-item {
+			display: flex;
+			color: $primary;
+			cursor: pointer;
+			padding: 1em 0;
+
+			@media screen and (min-width: $breakpoint-md) {
+				padding: 1em 1.5em;
+			}
+
+			i {
+				font-size: clamp(24px, 5vw, 34px);
+				transform: translateX(-50%);
+				transition: transform 0.3s ease;
+			}
+
+			&:hover i {
+				transform: translateX(0);
+			}
+
+			&.open {
+				i {
+					transform: rotate(-90deg);
+				}
+			}
+		}
+
+		.content--dropdown-menu {
+			height: 0;
+			overflow: hidden;
+			transition: height 0.3s ease;
+			line-height: 1.8em;
+			padding: 0 1.5em;
+
+			@media screen and (min-width: $breakpoint-md) {
+				padding: 0 1em;
+			}
+
+		}
+	}
+}

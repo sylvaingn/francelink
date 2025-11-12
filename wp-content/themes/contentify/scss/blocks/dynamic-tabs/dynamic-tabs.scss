@@ -1,0 +1,112 @@
+@use "../../inc/variables" as *;
+
+$padding-desktop: 10px;
+$padding-mobile: 10px;
+
+.dynamic-tabs-block {
+	padding: 3em 0;
+	background: white;
+
+	&:not(.is-editing) {
+		.missions-text-img-img {
+			transform: translateX(-100%);
+		}
+
+		.missions-text-img-text {
+			transform: translateX(100%);
+		}
+	}
+
+	&-container {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.missions-tabs--titles {
+		max-width: 100%;
+		overflow: auto;
+
+		.titles--wrapper {
+			display: flex;
+			align-items: center;
+			gap: clamp(2em, 8.4vw, 8em);
+			margin-bottom: 1.2em;
+
+			@media screen and (max-width: $breakpoint-md) {
+				white-space: nowrap;
+				width: max-content;
+			}
+
+			.title {
+				display: inline-block;
+				width: max-content;
+				position: relative;
+				cursor: pointer;
+				padding-bottom: 0.3em;
+
+				&::after {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					transform: scaleX(0);
+					height: 0.1em;
+					background-color: black;
+					transition: transform 0.3s $cubic-transition;
+				}
+
+				&.active, &:hover {
+					&::after {
+						transform: scaleX(1);
+					}
+				}
+			}
+		}
+
+	}
+
+	.missions-tabs--content {
+		position: relative;
+	}
+
+	.dynamic-tab--item {
+		&:not(.active) {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			visibility: hidden;
+		}
+
+		@media screen and (min-width: $breakpoint-md) {
+			display: flex;
+			align-items: center;
+		}
+
+		.missions-text-img-img {
+			img {
+				display: block;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+
+			@media screen and (min-width: $breakpoint-md) {
+				width: 50%;
+				align-self: stretch;
+			}
+		}
+
+		.missions-text-img-text {
+			padding: 1em 0;
+			padding-left: clamp(var(--container-padding), 8vw, 126px);
+			padding-right: clamp(var(--container-padding), 9.5vw, 100vw);
+
+			@media screen and (min-width: $breakpoint-md) {
+				width: 50%;
+			}
+		}
+	}
+}
