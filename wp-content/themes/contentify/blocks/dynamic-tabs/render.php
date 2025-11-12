@@ -42,31 +42,33 @@ foreach ($dynamic_tabs as $key => $tab) {
 ?>
 
 <div <?php echo $block_obj->body_block('dynamic-tabs-block'); ?>>
-    <div class="missions-tabs--titles container-full">
-        <div class="titles--wrapper">
-            <?php foreach ($dynamic_tabs_titles as $k => $title):
-                $isFirstEl = $k === 0; ?>
-                <div class="title section-title <?php echo $isFirstEl ? 'active' : ''; ?>"
-                     data-index="<?php echo $k; ?>"><?php echo $title; ?></div>
+    <div class="container container-large">
+        <div class="missions-tabs--titles">
+            <div class="titles--wrapper">
+                <?php foreach ($dynamic_tabs_titles as $k => $title):
+                    $isFirstEl = $k === 0; ?>
+                    <div class="title section-title <?php echo $isFirstEl ? 'active' : ''; ?>"
+                         data-index="<?php echo $k; ?>"><?php echo $title; ?></div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+        <div class="missions-tabs--content">
+            <?php foreach ($dynamic_tabs_contents as $k => $content):
+                $content_img_id = $content['img'] ?? '';
+                $content_text = $content['text'] ?? '';
+
+                $isFirstEl = $k === 0;
+                ?>
+                <div class="dynamic-tab--item <?php echo $isFirstEl ? 'active' : ''; ?>" data-index="<?php echo $k; ?>">
+                    <div class="missions-text-img-img">
+                        <?php echo wp_get_attachment_image($content_img_id, 'large'); ?>
+                    </div>
+                    <div class="missions-text-img-text">
+                        <?php echo $content_text; ?>
+                    </div>
+                </div>
+
             <?php endforeach; ?>
         </div>
-    </div>
-    <div class="missions-tabs--content">
-        <?php foreach ($dynamic_tabs_contents as $k => $content):
-            $content_img_id = $content['img'] ?? '';
-            $content_text = $content['text'] ?? '';
-
-            $isFirstEl = $k === 0;
-            ?>
-            <div class="dynamic-tab--item <?php echo $isFirstEl ? 'active' : ''; ?>" data-index="<?php echo $k; ?>">
-                <div class="missions-text-img-img">
-                    <?php echo wp_get_attachment_image($content_img_id, 'large'); ?>
-                </div>
-                <div class="missions-text-img-text">
-                    <?php echo $content_text; ?>
-                </div>
-            </div>
-
-        <?php endforeach; ?>
     </div>
 </div>
