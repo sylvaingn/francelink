@@ -95,15 +95,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    hasChildrenEls?.forEach((el) => {
-        const subMenu = el.querySelector('.sub-menu');
-        el.addEventListener('click', function () {
-            gsap.to(subMenu, {
-                maxHeight: el.classList.contains('open') ? 0 : subMenu.scrollHeight
-            })
-            el.classList.toggle('open');
-        })
-    })
 
     // Prefetch
 

@@ -18,8 +18,8 @@
         "anchor": false,
         "alignContent": false,
         "color": {
-            "text": false,
-            "background": false,
+            "text": true,
+            "background": true,
             "link": false
         },
         "spacing": {

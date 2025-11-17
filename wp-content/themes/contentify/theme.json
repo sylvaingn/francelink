@@ -18,13 +18,33 @@
             "palette": [
                 {
                     "color": "#eb5d18",
-                    "name": "Primary",
+                    "name": "Couleur principale",
                     "slug": "primary"
                 },
                 {
+                    "color": "#f7b694",
+                    "name": "Couleur principale - Light",
+                    "slug": "primary-light"
+                },
+                {
                     "color": "#7C7B7B",
-                    "name": "Gray",
+                    "name": "Gris",
                     "slug": "gray"
+                },
+                {
+                    "color": "#d5d5d5",
+                    "name": "Gris clair",
+                    "slug": "light-gray"
+                },
+                {
+                    "color": "#111111",
+                    "name": "Noir",
+                    "slug": "black"
+                },
+                {
+                    "color": "#ffffff",
+                    "name": "Blanc",
+                    "slug": "white"
                 }
             ],
             "duotone": [],
