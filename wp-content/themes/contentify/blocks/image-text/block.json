@@ -40,7 +40,7 @@
         },
         "spacing": {
             "margin": true,
-            "padding": false,
+            "padding": true,
             "blockGap": true
         },
         "alignText": true,

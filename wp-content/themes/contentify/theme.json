@@ -22,7 +22,7 @@
                     "slug": "primary"
                 },
                 {
-                    "color": "#f7b694",
+                    "color": "#fbe0d2",
                     "name": "Couleur principale - Light",
                     "slug": "primary-light"
                 },
@@ -32,7 +32,7 @@
                     "slug": "gray"
                 },
                 {
-                    "color": "#d5d5d5",
+                    "color": "#efefef",
                     "name": "Gris clair",
                     "slug": "light-gray"
                 },

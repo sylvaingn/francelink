@@ -63,10 +63,13 @@ foreach ($dynamic_tabs as $key => $tab) {
 
                 $isFirstEl = $k === 0;
                 ?>
-                <div class="dynamic-tab--item <?php echo $isFirstEl ? 'active' : ''; ?>" data-index="<?php echo $k; ?>">
-                    <div class="missions-text-img-img <?php echo $content_img_contains === true ? 'contains' : ''; ?>">
-                        <?php echo wp_get_attachment_image($content_img_id, 'large'); ?>
-                    </div>
+                <div class="dynamic-tab--item <?php echo empty($content_img_id) ? 'no-image' : ''; ?> <?php echo $isFirstEl ? 'active' : ''; ?>"
+                     data-index="<?php echo $k; ?>">
+                    <?php if (!empty($content_img_id)): ?>
+                        <div class="missions-text-img-img <?php echo $content_img_contains === true ? 'contains' : ''; ?>">
+                            <?php echo wp_get_attachment_image($content_img_id, 'large'); ?>
+                        </div>
+                    <?php endif; ?>
                     <div class="missions-text-img-text">
                         <?php echo $content_text; ?>
                     </div>

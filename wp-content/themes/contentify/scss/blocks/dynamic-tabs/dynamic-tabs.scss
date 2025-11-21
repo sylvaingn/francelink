@@ -87,6 +87,7 @@ $padding-mobile: 10px;
 		@media screen and (min-width: $breakpoint-md) {
 			display: flex;
 			align-items: center;
+			gap: 3em;
 		}
 
 		.missions-text-img-img {
@@ -109,8 +110,8 @@ $padding-mobile: 10px;
 
 		.missions-text-img-text {
 			padding: 1em 0;
-			padding-left: clamp(var(--container-padding), 8vw, 126px);
-			padding-right: clamp(var(--container-padding), 9.5vw, 100vw);
+			//padding-left: clamp(var(--container-padding), 8vw, 126px);
+			//padding-right: clamp(var(--container-padding), 9.5vw, 100vw);
 
 			@media screen and (min-width: $breakpoint-md) {
 				width: 50%;

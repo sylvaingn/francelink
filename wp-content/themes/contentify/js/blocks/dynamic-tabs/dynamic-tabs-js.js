@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (!titlesContainer || !contentsContainer) return;
 
-        console.log('entrer')
         // On transforme en tableaux pour pouvoir utiliser indexOf etc.
         const titles = Array.from(titlesContainer.querySelectorAll('.title'));
         const contents = Array.from(contentsContainer.querySelectorAll('.dynamic-tab--item'));
@@ -20,10 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (i === 0) {
                 ScrollTrigger.create({
                     trigger: block,
-                    start: "top center",
+                    start: "center bottom",
                     once: true,
                     onEnter: () => {
-                        console.log('enter')
                         titles[i].classList.add('active');
                         content.classList.add('active');
                         gsap.to(img, {duration: 0.6, opacity: 1, x: 0, ease: 'power2.out'});
